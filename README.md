@@ -4,7 +4,7 @@
 Python 코드에 MySQL 아이디 이름과 비밀번호를 알맞게 설정해주세요.
 
 ## 2. 데이터베이스 생성
-MySQL에서 다음 명령어로 programming 데이터베이스를 생성하세요:
+MySQL에서 다음 명령어로 programming 데이터베이스를 생성하세요
 ```sql
 CREATE DATABASE programming;
 ```
