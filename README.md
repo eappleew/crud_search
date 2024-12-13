@@ -20,4 +20,4 @@ CREATE TABLE crud_information (
 );
 ```
 
-## 4. 실행해주시면 됩니다.
+## 4. 파이써 코드를 실행해주시면 됩니다.
