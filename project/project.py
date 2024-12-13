@@ -8,7 +8,7 @@ import pymysql,datetime
 app = Flask(__name__)
 
 
-db = pymysql.connect(host='localhost',user='root',password='1234',charset='utf8')
+db = pymysql.connect(host='localhost',user='root',password='1234',charset='utf8') # mysql 로그인 부분
 cursor = db.cursor(pymysql.cursors.DictCursor)
 cursor.execute('USE programming;')
 cursor.execute('SELECT * FROM crud_information;')
