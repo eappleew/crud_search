@@ -7,10 +7,22 @@ import pymysql,datetime
 
 app = Flask(__name__)
 
+def initialize_database():
+    cursor.execute('CREATE DATABASE IF NOT EXISTS programming;')
+    cursor.execute('USE programming;')
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS crud_information (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            title VARCHAR(255) NOT NULL,
+            description TEXT NOT NULL,
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        );
+    ''')
+    db.commit()
 
-db = pymysql.connect(host='localhost',user='root',password='1234',charset='utf8') # mysql 로그인 부분
+db = pymysql.connect(host='localhost',user='root',password='1234',charset='utf8')
 cursor = db.cursor(pymysql.cursors.DictCursor)
-cursor.execute('USE programming;')
+initialize_database()
 cursor.execute('SELECT * FROM crud_information;')
 value = cursor.fetchall()
 info = value
