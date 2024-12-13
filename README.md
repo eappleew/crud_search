@@ -1,10 +1,23 @@
-## python 코드에 mysql 아이디 이름과 비밀번호를 알맞게 설정해주세요.
-## 설정 하셨다면 mysql 에서 programming 이라는 데이터 베이스를 생성하고 
-## 테이블 생성하는 명렁어를 복붙하여 사용해주신 뒤에 프로그램을 실행해 주세요.
+# 프로젝트 설정 및 실행 가이드
 
+## 1. MySQL 설정
+Python 코드에 MySQL 아이디 이름과 비밀번호를 알맞게 설정해주세요.
+
+## 2. 데이터베이스 생성
+MySQL에서 다음 명령어로 programming 데이터베이스를 생성하세요:
+```sql
+CREATE DATABASE programming;
+```
+
+## 3. 테이블 생성
+MySQL 에서 다음 명령어로 crud_information 테이블을 생성해주세요
+```sql
 CREATE TABLE crud_information (
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255),
     description TEXT,
     time DATETIME NULL
 );
+```
+
+## 4. 실행해주시면 됩니다.
